@@ -20,13 +20,14 @@ public class Circle extends Shape {
     }
 
     @Override
-    public double getArea() {
+    public double getArea() {      
         try {
             return Math.PI * Math.pow(UnitConverter.convertToCm(inputType, this.radius), 2);
         } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
         
-        return Math.PI * this.radius * this.radius;
+        return 0;      
     }
 
     @Override

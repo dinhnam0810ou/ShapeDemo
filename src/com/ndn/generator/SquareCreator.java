@@ -11,7 +11,7 @@ public class SquareCreator implements ShapeCreator<Square>{
     @Override
     public Square create(Unit inputType) {
         Random rand = new Random();
-        return new Square(inputType, rand.nextDouble());
+        return new Square(inputType, 1 + rand.nextDouble() * (19));
     }
 
 

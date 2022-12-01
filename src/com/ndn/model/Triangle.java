@@ -29,12 +29,14 @@ public class Triangle extends Shape{
     }
 
     @Override
-    public double getArea() {
+    public double getArea() {    
         try {
-            return (UnitConverter.convertToCm(inputType, this.bottomEdge)/2) * UnitConverter.convertToCm(inputType, this.height);
+            return (UnitConverter.convertToCm(inputType, this.bottomEdge)/2) * UnitConverter.convertToCm(inputType, this.height);     
         } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
-        return (this.bottomEdge/2) * this.height;
+        
+        return 0;
     }
 
     @Override

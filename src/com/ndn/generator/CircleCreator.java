@@ -12,7 +12,7 @@ public class CircleCreator implements ShapeCreator<Circle> {
     @Override
     public Circle create(Unit inputType) {
         Random rand = new Random();
-        return new Circle(inputType, rand.nextDouble());
+        return new Circle(inputType, 1 + rand.nextDouble() * (19));
     }
 
 }

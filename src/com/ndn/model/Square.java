@@ -20,12 +20,14 @@ public class Square extends Shape {
     }
 
     @Override
-    public double getArea() {
+    public double getArea() {      
         try {
-            return Math.pow(UnitConverter.convertToCm(inputType, edge), 2);
+            return Math.pow(UnitConverter.convertToCm(inputType, this.edge), 2);  
         } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
-        return Math.pow(edge, 2);
+        
+        return 0;
     }
 
     @Override

@@ -10,7 +10,7 @@ public class TriangleCreator implements ShapeCreator<Triangle>{
     @Override
     public Triangle create(Unit inputType) {
         Random rand = new Random();
-        return new Triangle(inputType, rand.nextDouble(), rand.nextDouble());
+        return new Triangle(inputType, 1 + rand.nextDouble() * (19), 1 + rand.nextDouble() * (19));
     }
 
 

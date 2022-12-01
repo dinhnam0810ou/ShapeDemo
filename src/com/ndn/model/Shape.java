@@ -2,7 +2,7 @@ package com.ndn.model;
 
 public abstract class Shape {
     
-    protected Unit inputType;
+    protected Unit inputType = Unit.cm;
 
     public Shape(Unit inputType) {
         this.inputType = inputType;

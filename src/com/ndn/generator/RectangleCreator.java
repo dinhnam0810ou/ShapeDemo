@@ -10,7 +10,7 @@ public class RectangleCreator implements ShapeCreator<Rectangle>{
     @Override
     public Rectangle create(Unit inputType) {
         Random rand = new Random();
-        return new Rectangle(inputType, rand.nextDouble(), rand.nextDouble());
+        return new Rectangle(inputType, 1 + rand.nextDouble() * (19), 1 + rand.nextDouble() * (19));
     }
 
 

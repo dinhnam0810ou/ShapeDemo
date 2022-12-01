@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 import com.ndn.converter.UnitConverter;
-import com.ndn.generator.CircleCreator;
 import com.ndn.generator.ShapeGenerator;
 import com.ndn.model.Circle;
 import com.ndn.model.Rectangle;
@@ -18,14 +18,13 @@ import com.ndn.model.Triangle;
 import com.ndn.model.Unit;
 
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         
         System.out.println("========= Test Exercise 1 =========");
         Circle c1 = new Circle(Unit.dm, 10);
-        Rectangle r1 = new Rectangle(Unit.inch, 20, 10);
+        Rectangle r1 = new Rectangle(Unit.mm, 20, 10);
         Square s1 = new Square(Unit.cm, 5);
-        Triangle t1 = new Triangle(Unit.inch, 20, 7.9);
-
+        Triangle t1 = new Triangle(Unit.cm, 20, 7.9);
         List<Shape> shapes = new ArrayList<>();
         shapes.add(c1);
         shapes.add(r1);
@@ -73,6 +72,7 @@ public class Test {
            sum += s.getArea();
         }
         System.out.println("Total area is " + sum + " cm^2");
-     
+        
+        
     }
 }

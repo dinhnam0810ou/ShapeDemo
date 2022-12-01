@@ -32,10 +32,11 @@ public class Rectangle extends Shape{
     @Override
     public double getArea() {
         try {
-            return UnitConverter.convertToCm(inputType, length) * UnitConverter.convertToCm(inputType, length);
+            return UnitConverter.convertToCm(inputType, this.length) * UnitConverter.convertToCm(inputType, this.width);     
         } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
-        return this.length * this.width;
+        return 0;
     }
 
     @Override
